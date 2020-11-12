@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/serg/Рабочий стол/simpleSite/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_310d0358"
+  }
+]
