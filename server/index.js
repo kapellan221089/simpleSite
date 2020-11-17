@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 80
 app.use(morgan('dev'));
 
 
+
+
 builder.build()
   .then(() => {
   // Рендерить каждый маршрут с Nuxt.js
