@@ -1,12 +1,16 @@
 module.exports = { 
-    buildModules: [
+    Modules: [
+        // Simple usage
         '@nuxtjs/vuetify',
-      ],
-      plugins: [{ src: '@/plugins/socket', ssr: false }],
-      head: {
-        meta: [
-            { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-        ]
+    
+        // With options
+        ['@nuxtjs/vuetify', { /* module options */ }]
+    ],
+    plugins: [{ src: '@/plugins/socket', ssr: false }],
+    head: {
+      meta: [
+          { charset: 'utf-8' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      ]
     },
 }
