@@ -1,7 +1,6 @@
 module.exports = { 
     buildModules: [
-        '@nuxtjs/vuetify',
-        ['@nuxtjs/vuetify', { /* module options */ }]
+        '@nuxtjs/vuetify'
       ],
       plugins: [{ src: '@/plugins/socket', ssr: false }],
       head: {
