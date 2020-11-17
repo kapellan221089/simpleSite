@@ -7,14 +7,12 @@
     "start": "node ./server/index.js"
   },
   "dependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
     "express": "^4.16.4",
     "morgan": "*",
     "nodemon": "^1.19.4",
     "nuxt": "^2.14.7",
     "socket.io": "^2.2.0",
     "vue-socket.io": "^3.0.7"
-  },
-  "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.2"
   }
 }
