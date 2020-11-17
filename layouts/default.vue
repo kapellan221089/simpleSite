@@ -7,7 +7,6 @@
     </v-navigation-drawer>
 
     <v-app-bar app>
-
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title><div class="font-italic text--disabled text-right">Collapsing Bar</div></v-toolbar-title>
     </v-app-bar>
