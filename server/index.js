@@ -6,6 +6,9 @@ const morgan = require('morgan');
 const nuxt = new Nuxt(config);
 const builder = new Builder(nuxt);
 
+let config = require('../nuxt.config.js')
+config.dev = !(process.env.NODE_ENV === 'production')
+
 const PORT = process.env.PORT || 80
 app.use(morgan('dev'));
 
