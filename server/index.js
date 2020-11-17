@@ -7,7 +7,7 @@ const nuxt = new Nuxt(config);
 const builder = new Builder(nuxt);
 
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 80
 app.use(morgan('dev'));
 
 
