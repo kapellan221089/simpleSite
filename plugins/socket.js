@@ -5,7 +5,7 @@ export default function({ store }) {
   Vue.use(
     new VueSocketIO({
       debug: false,
-      connection: PORT,
+      connection: 'https://thawing-peak-23893.herokuapp.com',
       vuex: {
         store,
         actionPrefix: 'SOCKET_',
