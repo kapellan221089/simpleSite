@@ -15,8 +15,5 @@
     "vue-socket.io": "^3.0.7",
     "vuetify": "^2.3.15",
     "vuetify-loader": "^1.2.1"
-  },
-  "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.2"
   }
 }
