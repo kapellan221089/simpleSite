@@ -1,6 +1,7 @@
 <template>
   <v-app app>
     <div>
+      <a href="https://www.google.ru/">NSR</a>
     <v-navigation-drawer v-model="drawer" app mobile-breakpoint="650">
       <v-list subheader>
         <v-subheader>Menu</v-subheader>
