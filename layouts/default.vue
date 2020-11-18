@@ -1,5 +1,6 @@
 <template>
   <v-app app>
+    <div>
     <v-navigation-drawer v-model="drawer" app mobile-breakpoint="650">
       <v-list subheader>
         <v-subheader>Menu</v-subheader>
@@ -15,7 +16,8 @@
         <nuxt/>
       </div>
     </v-main>
-
+    </div>
+    <div>
     <v-footer
     app
     dark
@@ -49,6 +51,7 @@
       </v-card-text>
     </v-card>
   </v-footer>
+  </div>
   </v-app>
 </template>
 
