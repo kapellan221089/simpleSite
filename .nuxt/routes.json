@@ -1,5 +1,12 @@
 [
   {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/home/serg/Рабочий стол/simpleSite/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_6f3f31dc"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/serg/Рабочий стол/simpleSite/pages/index.vue",
