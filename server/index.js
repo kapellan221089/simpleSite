@@ -3,6 +3,7 @@ const {Nuxt, Builder}  = require('nuxt');
 const config = require('../config/nuxt.config');
 const morgan = require('morgan');
 
+
 const nuxt = new Nuxt(config);
 const builder = new Builder(nuxt);
 
