@@ -1,10 +1,10 @@
 [
   {
-    "name": "inspire",
-    "path": "/inspire",
-    "component": "/home/serg/Рабочий стол/simpleSite/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_6f3f31dc"
+    "name": "test",
+    "path": "/test",
+    "component": "/home/serg/Рабочий стол/simpleSite/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_87504600"
   },
   {
     "name": "index",

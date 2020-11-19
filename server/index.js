@@ -17,7 +17,7 @@ builder.build()
     app.use(nuxt.render)
     // Запустить сервер
     console.log(PORT);
-    server.listen(PORT, ()=>{
+    server.listen(PORT,'0.0.0.0', ()=>{
        console.log('Server run to port'+PORT);
     });
   });

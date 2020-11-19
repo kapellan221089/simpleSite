@@ -1,1 +1,1 @@
-export default {"theme":{"dark":true,"themes":{"dark":{}}}}
+export default {}
