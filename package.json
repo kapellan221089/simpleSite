@@ -13,8 +13,5 @@
     "nuxt": "^2.14.7",
     "socket.io": "^2.2.0",
     "vue-socket.io": "^3.0.7"
-  },
-  "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.2"
   }
 }
