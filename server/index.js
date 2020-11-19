@@ -6,12 +6,13 @@ const nuxt = new Nuxt(config);
 const builder = new Builder(nuxt);
 
 const PORT = process.env.PORT || 8000
-builder.build()
+
+builder.build(PORT)
   .then(() => {
   // Рендерить каждый маршрут с Nuxt.js
     app.use(nuxt.render)
     // Запустить сервер
-    app.listen(process.env.PORT, '0.0.0.0', ()=>{
+    app.listen(PORT, ()=>{
        console.log('Server run in 8000 port'); 
     });
   });
