@@ -11,7 +11,7 @@ builder.build()
   // Рендерить каждый маршрут с Nuxt.js
     app.use(nuxt.render)
     // Запустить сервер
-    app.listen(PORT, ()=>{
+    app.listen(process.env.PORT, '0.0.0.0', ()=>{
        console.log('Server run in 8000 port'); 
     });
   });
