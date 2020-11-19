@@ -12,10 +12,11 @@ const PORT = process.env.PORT || 80
 app.use(morgan('dev'));
 
 builder.build()
-  .then(() => {
+  .then((PORT) => {
   // Рендерить каждый маршрут с Nuxt.js
     app.use(nuxt.render)
     // Запустить сервер
+    console.log(PORT);
     server.listen(PORT, ()=>{
        console.log('Server run');
     });
