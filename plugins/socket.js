@@ -5,7 +5,7 @@ export default function({ store }) {
   Vue.use(
     new VueSocketIO({
       debug: false,
-      connection: 'https://thawing-peak-23893.herokuapp.com',
+      connection: 'https://infinite-refuge-50906.herokuapp.com',
       vuex: {
         store,
         actionPrefix: 'SOCKET_',

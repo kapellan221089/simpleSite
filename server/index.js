@@ -18,6 +18,6 @@ builder.build()
     // Запустить сервер
     console.log(PORT);
     server.listen(PORT, ()=>{
-       console.log('Server run');
+       console.log('Server run to port'+PORT);
     });
   });

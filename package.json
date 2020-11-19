@@ -4,7 +4,9 @@
   "private": false,
   "scripts": {
     "dev": "nuxt",
-    "start": "node ./server/index.js"
+    "build": "nuxt build",
+    "start": "node ./server/index.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "express": "^4.16.4",
