@@ -1,4 +1,5 @@
-const colors = require ('vuetify/es5/util/colors')
+const colors = require ('vuetify/es5/util/colors');
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports =  {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -51,5 +52,12 @@ module.exports =  {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: ['vuetify/lib'],
+    plugins: [new VuetifyLoaderPlugin()],
+
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
   }
 }
