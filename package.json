@@ -1,7 +1,6 @@
 {
-  "name": "simplesite",
-  "author": "kapellan",
-  "private": false,
+  "name": "simple",
+  "version": "1.0.0",
   "engines": {
     "node": "14.x"
   },
@@ -12,17 +11,10 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "morgan": "*",
-    "nodemon": "^1.19.4",
-    "nuxt": "^2.14.7",
-    "socket.io": "^2.2.0",
-    "vuetify":"*",
-    "vuetify-loader": "*",
-    "@nuxtjs/vuetify": "^1.11.2",
-    "vue-socket.io": "^3.0.7"
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6"
   },
   "devDependencies": {
-    
+    "@nuxtjs/vuetify": "^1.11.2"
   }
 }
