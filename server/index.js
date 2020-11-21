@@ -1,6 +1,6 @@
 const {app,server} = require('./app');
 const {Nuxt, Builder}  = require('nuxt');
-const config = require('../config/nuxt.config');
+const config = require('../cnuxt.config');
 const morgan = require('morgan');
 
 
