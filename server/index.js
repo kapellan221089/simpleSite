@@ -8,7 +8,6 @@ config.dev = !(process.env.NODE_ENV === 'production')
 async function start() {
   const nuxt = new Nuxt(config)
 
-  const { host, port } = nuxt.options.server
 
   if (config.dev) {
     const builder = new Builder(nuxt)
@@ -16,7 +15,7 @@ async function start() {
   } else {
     await nuxt.ready()
   }
-
+ const PORT = process.env.PORT
   app.use(nuxt.render)
 
   server.listen(port, () => {
