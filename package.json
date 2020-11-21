@@ -1,14 +1,12 @@
 {
-  "name": "chat-nuxt",
+  "name": "simplesite",
   "version": "1.0.0",
-  "description": "My world-class Nuxt.js project",
-  "author": "Vladilen",
+  "author": "kapellan",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
-    "start": "node server/index.js",
-    "generate": "nuxt generate"
+    "start": "node server/index.js"
   },
   "dependencies": {
     "@nuxtjs/pwa": "*",

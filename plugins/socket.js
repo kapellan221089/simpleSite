@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import VueSocketIO from 'vue-socket.io'
+import Vue from 'vue';
+import VueSocketIO from 'vue-socket.io';
 
 export default function({ store }) {
   Vue.use(
     new VueSocketIO({
       debug: false,
-      connection: 'http://localhost:3000',
+      connection: 'https://infinite-refuge-50906.herokuapp.com',
       vuex: {
         store,
         actionPrefix: 'SOCKET_',

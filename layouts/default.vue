@@ -1,48 +1,72 @@
 <template>
-  <v-app app dark>
-    <v-navigation-drawer app v-model="drawer">
+  <v-app app>
+    <div>
+      <a href="/test">NSR</a>
+    <v-navigation-drawer v-model="drawer" app mobile-breakpoint="650">
       <v-list subheader>
-        <v-subheader>Список людей в комнате</v-subheader>
-        <v-list-tile v-for="u in users" :key="u.id" @click.prevent>
-          <v-list-tile-content>
-            <v-list-tile-title>{{u.name}}</v-list-tile-title>
-          </v-list-tile-content>
-
-          <v-list-tile-action>
-            <v-icon :color="u.id === 2 ? 'primary' : 'grey'">chat_bubble</v-icon>
-          </v-list-tile-action>
-        </v-list-tile>
+        <v-subheader>Menu</v-subheader>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app>
-      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click="exit">
-        <v-icon></v-icon>
-      </v-btn>
-      <v-toolbar-title>Чат комнаты {{user.room}}</v-toolbar-title>
-    </v-toolbar>
-    <v-content>
-      <div>
+
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title><div class="font-italic text--disabled text-right">Collapsing Bar</div></v-toolbar-title>
+    </v-app-bar>
+    <v-main app>
+      <div style="heigth:100%">
         <nuxt/>
       </div>
-    </v-content>
+    </v-main>
+    </div>
+    <div>
+    <v-footer
+    app
+    dark
+    padless
+  >
+    <v-card
+      class="flex"
+      flat
+      tile
+    >
+      <v-card-title class="teal">
+        <strong class="subheading">Get connected with us on social networks!</strong>
+
+        <v-spacer></v-spacer>
+
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="mx-4"
+          dark
+          icon
+        >
+          <v-icon size="24px">
+            {{ icon }}
+          </v-icon>
+        </v-btn>
+      </v-card-title>
+
+      <v-card-text class="py-2 white--text text-center">
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+  </div>
   </v-app>
 </template>
 
+
 <script>
-import { mapState, mapMutations } from "vuex";
-export default {
-  data: () => ({
-    drawer: true,
-    users: [{ id: 1, name: "User 1" }, { id: 2, name: "User 2" }]
-  }),
-  computed: mapState(["user"]),
-  methods: {
-    ...mapMutations(["clearData"]),
-    exit() {
-      this.$router.push("/?message=leftChat");
-      this.clearData();
-    }
+  export default {
+   data: () => ({
+      icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-linkedin',
+        'mdi-instagram',
+      ],
+    drawer: false,
+  })
   }
-};
 </script>
