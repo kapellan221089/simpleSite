@@ -1,18 +1,29 @@
-const app = require('express')();
-const {Nuxt, Builder}  = require('nuxt');
-const config = require('../nuxt.config.js');
+const consola = require('consola')
+const { Nuxt, Builder } = require('nuxt')
+const { app, server } = require('./app')
 
-const nuxt = new Nuxt(config);
-const builder = new Builder(nuxt);
+let config = require('../nuxt.config.js')
+config.dev = !(process.env.NODE_ENV === 'production')
 
-const PORT = process.env.PORT || 3000
+async function start() {
+  const nuxt = new Nuxt(config)
 
-builder.build()
-  .then(() => {
-  // Рендерить каждый маршрут с Nuxt.js
-    app.use(nuxt.render)
-    // Запустить сервер
-    app.listen(PORT, ()=>{
-       console.log('Server run in'); 
-    });
-  });
+  const { host, port } = nuxt.options.server
+
+  if (config.dev) {
+    const builder = new Builder(nuxt)
+    await builder.build()
+  } else {
+    await nuxt.ready()
+  }
+
+  app.use(nuxt.render)
+
+  server.listen(port, () => {
+    consola.ready({
+      message: `Server listening on http://${host}:${port}`,
+      badge: true
+    })
+  })
+}
+start()
