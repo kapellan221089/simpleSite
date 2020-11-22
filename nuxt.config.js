@@ -1,59 +1,53 @@
-const pkg = require('./package')
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+const colors = require('vuetify/es5/util/colors');
 
 module.exports = {
-  mode: 'universal',
-
-  /*
-   ** Headers of the page
-   */
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: pkg.name,
+    titleTemplate: '%s - simple',
+    title: 'simple',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
+  // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: [
+  ],
 
-  /*
-   ** Global CSS
-   */
-  css: ['~/assets/style/app.styl'],
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+  plugins: [
+  ],
 
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: ['@/plugins/vuetify', { src: '@/plugins/socket', ssr: false }],
+  // Auto import components (https://go.nuxtjs.dev/config-components)
+  components: true,
 
-  /*
-   ** Nuxt.js modules
-   */
-  modules: ['@nuxtjs/pwa'],
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+  buildModules: [
+    // https://go.nuxtjs.dev/vuetify
+    '@nuxtjs/vuetify',
+  ],
 
-  /*
-   ** Build configuration
-   */
+  // Modules (https://go.nuxtjs.dev/config-modules)
+  modules: [
+  ],
+
+  // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
+  vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    theme: {
+      dark: true,
+      themes: {
+
+      }
+    }
+  },
+
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ['vuetify/lib'],
-    plugins: [new VuetifyLoaderPlugin()],
-
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
   }
 }

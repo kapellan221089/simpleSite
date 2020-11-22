@@ -1,5 +1,5 @@
-export { default as Logo } from '../../components/Logo.vue'
-export { default as VuetifyLogo } from '../../components/VuetifyLogo.vue'
+export { default as Card } from '../../components/Card.vue'
+export { default as Slide } from '../../components/Slide.vue'
 
-export const LazyLogo = import('../../components/Logo.vue' /* webpackChunkName: "components/Logo" */).then(c => c.default || c)
-export const LazyVuetifyLogo = import('../../components/VuetifyLogo.vue' /* webpackChunkName: "components/VuetifyLogo" */).then(c => c.default || c)
+export const LazyCard = import('../../components/Card.vue' /* webpackChunkName: "components/Card" */).then(c => c.default || c)
+export const LazySlide = import('../../components/Slide.vue' /* webpackChunkName: "components/Slide" */).then(c => c.default || c)

@@ -1,25 +1,23 @@
 {
-  "name": "simplesite",
+  "name": "simple",
   "version": "1.0.0",
-  "author": "kapellan",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "node server/index.js"
+    "start": "node ./server/index.js",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "*",
-    "express": "*",
-    "nuxt": "*",
-    "socket.io": "*",
-    "vue-socket.io": "*",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "socket.io": "^2.2.0",
     "vuetify": "*",
-    "vuetify-loader": "*"
+    "vuetify-loader": "*",
+    "morgan": "*",
+    "vue-socket.io": "^3.0.7"
   },
   "devDependencies": {
-    "nodemon": "*",
-    "stylus": "*",
-    "stylus-loader": "*"
+    "@nuxtjs/vuetify": "^1.11.2"
   }
 }
