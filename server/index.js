@@ -5,7 +5,7 @@ const { app, server } = require('./app')
 let config = require('../nuxt.config.js')
 
 async function start() {
-  const nuxt = new Nuxt(config)
+  const nuxt = new Nuxt(config) 
 
   const PORT = process.env.PORT || 3000
 
