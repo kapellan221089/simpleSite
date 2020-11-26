@@ -7,7 +7,7 @@ let config = require('../nuxt.config.js')
 async function start() {
   const nuxt = new Nuxt(config) 
 
-  const PORT = process.env.PORT || 3000
+  const PORT = process.env.PORT || 5000
 
   
   const builder = new Builder(nuxt)

@@ -1,16 +1,24 @@
 <template>
   <v-app app>
     <div>
-      <a href="/test">NSR</a>
     <v-navigation-drawer v-model="drawer" app mobile-breakpoint="650">
       <v-list subheader>
-        <v-subheader>Menu</v-subheader>
+        <v-subheader class="title justify-center"><h4>Навигационное меню</h4></v-subheader>
+        <v-list-item  v-for="item in menus" :key="item.title" @click = "setCurrentMenu(item)" >
+          <v-list-item-content>
+            <v-list-item-title>{{item.title}}</v-list-item-title>
+          </v-list-item-content>
+
+          <v-list-item-content >
+            <v-icon :color="item === currentMenu? 'primary' : 'grey'">{{item.icon}}</v-icon>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title><div class="font-italic text--disabled text-right">Collapsing Bar</div></v-toolbar-title>
+      <v-toolbar-title class="font-italic">Название вашей чудесной и распрекрасной конторки:)</v-toolbar-title>
     </v-app-bar>
     <v-main app>
       <div style="heigth:100%">
@@ -29,8 +37,8 @@
       flat
       tile
     >
-      <v-card-title class="teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+      <v-card-title class="teal title justify-center">
+        <strong class="subheading">Свяжитесь с нами в социальных сетях!</strong>
 
         <v-spacer></v-spacer>
 
@@ -48,7 +56,7 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>Schlosser</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -59,14 +67,35 @@
 
 <script>
   export default {
-   data: () => ({
+    data: () => ({
       icons: [
         'mdi-facebook',
         'mdi-twitter',
         'mdi-linkedin',
         'mdi-instagram',
       ],
-    drawer: false,
-  })
+      menus: [
+        {
+          title:'Главная',
+          icon:'mdi-home',
+        },
+        {
+          title:'Услуги',
+          icon:'mdi-palette-advanced'
+        },
+        {
+          title:'Контакты',
+          icon: 'mdi-human-greeting-proximity'
+        }
+      ],
+      drawer: false,
+      currentMenu : 'Главная'
+    }),
+    methods:{
+      setCurrentMenu(item){
+        this.currentMenu = item
+        console.log(this.currentMenu)
+    }
+    }
   }
 </script>
