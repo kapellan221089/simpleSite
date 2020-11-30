@@ -1,6 +1,9 @@
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
-const { app, server } = require('./app')
+const { app, server } = require('./app');
+const morgan = require('morgan');
+
+app.use(morgan('dev'));
 
 let config = require('../nuxt.config.js')
 

@@ -1,5 +1,19 @@
 [
   {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/home/serg/Рабочий стол/simpleSite/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_3f385fbc"
+  },
+  {
+    "name": "service",
+    "path": "/service",
+    "component": "/home/serg/Рабочий стол/simpleSite/pages/service.vue",
+    "chunkName": "pages/service",
+    "_name": "_6b032037"
+  },
+  {
     "name": "test",
     "path": "/test",
     "component": "/home/serg/Рабочий стол/simpleSite/pages/test.vue",

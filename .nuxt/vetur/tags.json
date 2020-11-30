@@ -5,6 +5,12 @@
   "LazyCard": {
     "description": "Auto imported from components/Card.vue"
   },
+  "ServCard": {
+    "description": "Auto imported from components/ServCard.vue"
+  },
+  "LazyServCard": {
+    "description": "Auto imported from components/ServCard.vue"
+  },
   "Slide": {
     "description": "Auto imported from components/Slide.vue"
   },

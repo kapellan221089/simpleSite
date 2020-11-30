@@ -4,9 +4,9 @@
     <v-navigation-drawer v-model="drawer" app mobile-breakpoint="650">
       <v-list subheader>
         <v-subheader class="title justify-center"><h4>Навигационное меню</h4></v-subheader>
-        <v-list-item  v-for="item in menus" :key="item.title" @click = "setCurrentMenu(item)" >
+        <v-list-item  v-for="item in menus" :key="item.title" @click = "setCurrentMenu(item)" link :to="{name:item.link}" exact>
           <v-list-item-content>
-            <v-list-item-title>{{item.title}}</v-list-item-title>
+            <v-list-item-title>{{item.title}} </v-list-item-title>
           </v-list-item-content>
 
           <v-list-item-content >
@@ -78,14 +78,17 @@
         {
           title:'Главная',
           icon:'mdi-home',
+          link:'index'
         },
         {
           title:'Услуги',
-          icon:'mdi-palette-advanced'
+          icon:'mdi-palette-advanced',
+          link:'service'
         },
         {
           title:'Контакты',
-          icon: 'mdi-human-greeting-proximity'
+          icon: 'mdi-human-greeting-proximity',
+          link:'contact'
         }
       ],
       drawer: false,
