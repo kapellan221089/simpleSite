@@ -5,6 +5,12 @@
   "LazyCard": {
     "description": "Auto imported from components/Card.vue"
   },
+  "Contact": {
+    "description": "Auto imported from components/Contact.vue"
+  },
+  "LazyContact": {
+    "description": "Auto imported from components/Contact.vue"
+  },
   "ServCard": {
     "description": "Auto imported from components/ServCard.vue"
   },

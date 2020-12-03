@@ -8,42 +8,29 @@
   >
     <v-img
       :src="serv.src"
-      height="1000px"
+      :height="height"
     ></v-img>
 
     <v-card-title v-text="serv.title">
       
     </v-card-title>
 
-    <v-card-subtitle>
-      1,000 miles of wonder
-    </v-card-subtitle>
-
     <v-card-actions>
-      <v-btn
-        color="orange lighten-2"
-        text
-      >
-        Explore
-      </v-btn>
-
       <v-spacer></v-spacer>
 
       <v-btn
         icon
-        @click="show = !show"
+        @click="serv.show = !serv.show"
       >
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+        <v-icon>{{ serv.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
 
     <v-expand-transition>
-      <div v-show="show">
+      <div v-show="serv.show">
         <v-divider></v-divider>
 
-        <v-card-text v-text="serv.text">
-          
-        </v-card-text>
+        <v-card-text v-text="serv.text"></v-card-text>
       </div>
     </v-expand-transition>
   </v-card>
@@ -58,20 +45,34 @@ export default {
         {
           title: 'Проектная документация.', 
           src: 'https://payload.cargocollective.com/1/0/6670/61995/obmerniy%20plan.jpg',
-          text: 'Составление проектной документации и исполнительных чертежей'
+          text: 'Составление проектной документации и исполнительных чертежей',
+          show : false,
         },
               {
           title: 'Интерьер', 
           src: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
-          text: 'Подбор и размещение деталей внутренней отделки помещений'
+          text: 'Подбор и размещение деталей внутренней отделки помещений',
+          show: false,
         },
               {
           title: 'Дизайн интерьера', 
           src: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
-          text: 'Выбор цветовой гаммы внутренней отделки'
+          text: 'Выбор цветовой гаммы внутренней отделки',
+          show: false,
         },
       ],
     }),
+    computed: {
+      height () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return 220
+          case 'sm': return 400
+          case 'md': return 500
+          case 'lg': return 600
+          case 'xl': return 800
+        }
+      },
+    },
     
 }
 </script>

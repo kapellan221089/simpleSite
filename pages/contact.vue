@@ -1,3 +1,10 @@
 <template>
-    <h1>THIS IS CONTACT</h1>
+    <Contact/>
 </template>
+
+<script>
+import Contact from '@/components/Contact'
+export default {
+    components: {Contact},
+}
+</script>
